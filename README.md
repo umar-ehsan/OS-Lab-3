@@ -11,7 +11,7 @@ Yin Zhou<br>
 Thomas Jansz<br>
 100642111<br><br>
 
-# Objectives:<br><br>
+# Objectives:<br>
 Implement a multithreaded program that solves a Sudoku board.<br><br>
 Gain experience solving a problem with parallel code.<br><br>
 Gain experience using locking mechanisms like mutex locks.<br><br><br>
