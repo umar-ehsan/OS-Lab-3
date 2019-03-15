@@ -13,20 +13,10 @@ board *create_board(void){
     board *new_board = malloc(sizeof(board));
     for (int row = 0; row < NUM_VALUES; row++){
         for (int col = 0; col < NUM_VALUES; col++){
-            for (int values = 0; values < NUM_VALUES + 1; values++){
-                new_board->curr_val[row][col][values] = values;
-            }
+            new_board->curr_val[row][col] = 0;
         }
     }
     return new_board;    
-}
-
-void set_value(int row, int col, int value, board *board){
-    board->curr_val[row][col][0] = value;
-}
-
-int get_value(int row, int col, board *board){
-    return board->curr_val[row][col][0];
 }
 
 void print_board(board *board){
@@ -37,11 +27,11 @@ void print_board(board *board){
     for (int row = 0; row < NUM_VALUES; row++){
         printf("|");
         for (int col = 0; col < NUM_VALUES; col++){
-            if (board->curr_val[row][col][0] == 0){
+            if (board->curr_val[row][col] == 0){
                 printf(" - |");
             }
             else {
-                printf( " %s%d%s |", GREEN, board->curr_val[row][col][0], FLUSH);
+                printf( " %s%d%s |", GREEN, board->curr_val[row][col], FLUSH);
             }
         }
         printf("\n|");

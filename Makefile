@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -std=gnu99
+CFLAGS = -pthread -Wall -Wextra -std=gnu99
 LFLAGS = 
 LIBS = 
 SOURCES = sudokuboard.c solver.c
